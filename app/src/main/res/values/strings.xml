@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MiPokedex</string>
+    <string name="logo">IconPichu</string>
+    <string name="logo2">IconSandsdrew</string>
+    <string name="titulo">Creado por:\n Hernandez Calderon Fernando</string>
+    <string name="urlPoke">https://pokeapi.co/api/v2/</string>
+    <string name="listaNom">Nombre pokemon</string>
+    <string name="pokeNum">###</string>
+</resources>
