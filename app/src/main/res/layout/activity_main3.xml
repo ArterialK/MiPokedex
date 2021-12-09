@@ -7,4 +7,262 @@
     android:background="@drawable/pokedex2"
     tools:context=".view.ui.activities.MainActivity3">
 
+    <ImageView
+        android:id="@+id/ivPokeDetalle"
+        android:layout_width="173dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+        android:contentDescription="@string/pokeimagne"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.383"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/pbDetalles"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/tvTipos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/tipo"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#92FFFEFE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288"
+        tools:ignore="TextContrastCheck"
+        tools:text="@string/nombre" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="271dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numero"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/numero" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peso"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp" />
+
+            <TextView
+                android:id="@+id/tvPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/peso" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTTamano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tamano"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTamano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/tamano" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTExperiencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/experiencia"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvExperiencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/experiencia" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/ivTipo1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/pokeTipo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/ivTipo2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/pokeTipo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="#1C1C18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvDivisor"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821"
+        tools:ignore="TextContrastCheck"
+        tools:text="@string/pokeTipo1" />
+
+    <TextView
+        android:id="@+id/tvTipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="#1C1C18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvDivisor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821"
+        tools:ignore="TextContrastCheck"
+        tools:text="@string/pokeTipo2" />
+
+    <TextView
+        android:id="@+id/tvDivisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/divisor"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,38 @@
     <string name="app_name">MiPokedex</string>
     <string name="logo">IconPichu</string>
     <string name="logo2">IconSandsdrew</string>
+    <string name="pokeimagne">SpriteDelPoke</string>
+    <string name="pokeTipo1">tipo1</string>
+    <string name="pokeTipo2">tipo2</string>
     <string name="titulo">Creado por:\n Hernandez Calderon Fernando</string>
-    <string name="urlPoke">https://pokeapi.co/api/v2/</string>
+    <string name="urlPoke">https://pokeapi.co/api/v2/pokemon/</string>
     <string name="listaNom">Nombre pokemon</string>
     <string name="pokeNum">###</string>
+    <string name="experiencia">Exp Base:</string>
+    <string name="tamano">Tamaño(dm):</string>
+    <string name="peso">Peso(hg):</string>
+    <string name="numero">PokeID:</string>
+    <string name="nombre">PokeNombre</string>
+    <string name="tipo">Tipo(s)</string>
+    <string name="divisor">/</string>
+
+    <string name="agua">Agua</string>
+    <string name="fuego">Fuego</string>
+    <string name="volador">Volador</string>
+    <string name="fantasma">Fantasma</string>
+    <string name="bicho">Bicho</string>
+    <string name="hielo">Hielo</string>
+    <string name="tierra">Tierra</string>
+    <string name="roca">Roca</string>
+    <string name="peleador">Peleador</string>
+    <string name="siniestro">Siniestro</string>
+    <string name="hada">Hada</string>
+    <string name="electrico">Electrico</string>
+    <string name="normal">Normal</string>
+    <string name="psiquico">Psiquico</string>
+    <string name="dragon">Dragon</string>
+    <string name="veneno">Veneno</string>
+    <string name="acero">Acero</string>
+    <string name="hierba">Hierba</string>
+
 </resources>
