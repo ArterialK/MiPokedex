@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MiPokedex</string>
     <string name="logo">IconPichu</string>
-    <string name="logo2">IconSandsdrew</string>
+    <string name="logo2">IconSandshrew</string>
     <string name="pokeimagne">SpriteDelPoke</string>
     <string name="pokeTipo1">tipo1</string>
     <string name="pokeTipo2">tipo2</string>

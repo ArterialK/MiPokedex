@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MiPokedex</string>
+    <string name="logo">IconPichu</string>
+    <string name="logo2">IconSandshrew</string>
+    <string name="pokeimagne">SpriteOfPoke</string>
+    <string name="pokeTipo1">type1</string>
+    <string name="pokeTipo2">type2</string>
+    <string name="titulo">Create By Hernandez Calderon Fernando</string>
+    <string name="urlPoke">https://pokeapi.co/api/v2/pokemon/</string>
+    <string name="logs">LOGS</string>
+    <string name="listaNom">Pokemon name</string>
+    <string name="pokeNum">###</string>
+    <string name="experiencia">Base Exp.</string>
+    <string name="tamano">Height(dm)</string>
+    <string name="peso">Weight(hg)</string>
+    <string name="numero">PokeID</string>
+    <string name="nombre">PokeName</string>
+    <string name="tipo">Type(s)</string>
+    <string name="divisor">/</string>
+    <string name="agua">Water</string>
+    <string name="fuego">Fire</string>
+    <string name="volador">Flying</string>
+    <string name="fantasma">Ghost</string>
+    <string name="bicho">Bug</string>
+    <string name="hielo">Ice</string>
+    <string name="tierra">Ground</string>
+    <string name="roca">Rock</string>
+    <string name="peleador">Fight</string>
+    <string name="siniestro">Dark</string>
+    <string name="hada">Fairy</string>
+    <string name="electrico">Electric</string>
+    <string name="normal">Normal</string>
+    <string name="psiquico">Psiquic</string>
+    <string name="dragon">Dragon</string>
+    <string name="veneno">Poison</string>
+    <string name="acero">Steel</string>
+    <string name="hierba">Grass</string>
+</resources>
