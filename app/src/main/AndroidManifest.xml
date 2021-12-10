@@ -13,10 +13,12 @@
         android:theme="@style/Theme.MiPokedex">
         <activity
             android:name=".view.ui.activities.MainActivity3"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.ui.activities.MainActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.ui.activities.MainActivity"
             android:exported="true"

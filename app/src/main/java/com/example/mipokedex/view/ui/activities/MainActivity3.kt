@@ -20,13 +20,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity3 : AppCompatActivity() {
 
-    private val logtag = "LOGS"
     private lateinit var binding: ActivityMain3Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain3Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val urlBase = getString(R.string.urlPoke)
+        val logtag = getString(R.string.logs)
         val bundle = intent.extras
         val pokeNombre = bundle?.getString("pokemon","null")
         val retrofit: Retrofit = Retrofit.Builder()
@@ -40,7 +41,6 @@ class MainActivity3 : AppCompatActivity() {
             override fun onResponse(call: Call<Pokedetalle>, response: Response<Pokedetalle>) {
                 Log.d(logtag,"Respuesta del servidor: $response")
                 with(binding){
-                    pbDetalles.visibility = View.INVISIBLE
                     tvExperiencia.text = response.body()?.experiencia.toString()
                     tvID.text = response.body()?.numero.toString()
                     tvNombre.text = pokeNombre.toString()
@@ -58,8 +58,7 @@ class MainActivity3 : AppCompatActivity() {
                         val tipo2: String? = null
                         definirTipo(tipo1, tipo2)
                     }
-
-
+                    pbDetalles.visibility = View.INVISIBLE
                 }
             }
 

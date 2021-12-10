@@ -7,6 +7,7 @@
     <string name="pokeTipo2">tipo2</string>
     <string name="titulo">Creado por:\n Hernandez Calderon Fernando</string>
     <string name="urlPoke">https://pokeapi.co/api/v2/pokemon/</string>
+    <string name="logs">LOGS</string>
     <string name="listaNom">Nombre pokemon</string>
     <string name="pokeNum">###</string>
     <string name="experiencia">Exp Base:</string>

@@ -20,7 +20,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
-    private val logtag = "LOGS"
+
     private lateinit var binding: ActivityMain2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +28,8 @@ class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         val urlBase = getString(R.string.urlPoke)
-       val retrofit: Retrofit = Retrofit.Builder()
+        val logtag = getString(R.string.logs)
+        val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl(urlBase)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -39,16 +40,16 @@ class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
             override fun onResponse(call: Call<Pokemon>, response: Response<Pokemon>) {
                //Si funciona
                Log.d(logtag,"Respuesta del servidor: $response")
-                binding.pbConexion.visibility= View.INVISIBLE
-                try{
+               try{
                     val adaptador = Adaptador(this@MainActivity2,response.body()!!, this@MainActivity2)
                     with(binding){
                         rvListaPoke.layoutManager = LinearLayoutManager(this@MainActivity2)
                         rvListaPoke.adapter = adaptador
                     }
-                }catch(e: NullPointerException){
+               }catch(e: NullPointerException){
                     Toast.makeText(this@MainActivity2,"No se logro adaptar", Toast.LENGTH_SHORT).show()
-                }
+               }
+                binding.pbConexion.visibility= View.INVISIBLE
             }
 
             override fun onFailure(call: Call<Pokemon>, t: Throwable) {
