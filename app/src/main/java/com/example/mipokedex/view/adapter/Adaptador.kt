@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mipokedex.databinding.PokemonListBinding
 import com.example.mipokedex.model.Pokemon
 import com.example.mipokedex.model.Pokenombre
@@ -37,6 +38,8 @@ class Adaptador(context: Context, pokemones: Pokemon, onPokeListener: OnItemList
 
         private val tvPokeNombre = binding.tvPokeNombre
         private val tvPokeID = binding.tvPokeID
+        private val ivPokeball = binding.ivPokeball
+        private val context = binding.root.context
         private val mOnPokeListener = onPokeListener
         private lateinit var pokemon: Pokenombre
         init{
@@ -51,6 +54,9 @@ class Adaptador(context: Context, pokemones: Pokemon, onPokeListener: OnItemList
             tvPokeNombre.text = item.nombre.toString()
             tvPokeID.text = index.toString()
             pokemon = item
+            Glide.with(context)
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index.toString()}.png")
+                .into(ivPokeball)
         }
 
 
