@@ -7,6 +7,19 @@
     android:background="@drawable/pokedex2"
     tools:context=".view.ui.activities.MainActivity3">
 
+    <ImageButton
+        android:id="@+id/ibBoton"
+        android:layout_width="40dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573"
+        app:srcCompat="@drawable/boton"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
     <ImageView
         android:id="@+id/ivPokeDetalle"
         android:layout_width="173dp"

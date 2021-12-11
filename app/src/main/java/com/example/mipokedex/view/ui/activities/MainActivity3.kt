@@ -59,6 +59,7 @@ class MainActivity3 : AppCompatActivity() {
                         definirTipo(tipo1, tipo2)
                     }
                     pbDetalles.visibility = View.INVISIBLE
+                    ibBoton.setOnClickListener { finish() }
                 }
             }
 

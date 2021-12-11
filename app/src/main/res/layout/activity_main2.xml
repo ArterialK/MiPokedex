@@ -8,19 +8,6 @@
     android:background="@drawable/pokedex1"
     tools:context=".view.ui.activities.MainActivity2">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListaPoke"
-        android:layout_width="300dp"
-        android:layout_height="422dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774" />
-
     <ProgressBar
         android:id="@+id/pbConexion"
         style="?android:attr/progressBarStyle"
@@ -32,4 +19,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.581" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="321dp"
+        android:layout_height="527dp"
+        app:cardBackgroundColor="#E4DDDD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListaPoke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
