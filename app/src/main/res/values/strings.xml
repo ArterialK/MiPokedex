@@ -17,6 +17,7 @@
     <string name="nombre">PokeNombre</string>
     <string name="tipo">Tipo(s)</string>
     <string name="divisor">/</string>
+    <string name="sonido">Apagar sonido</string>
 
     <string name="agua">Agua</string>
     <string name="fuego">Fuego</string>

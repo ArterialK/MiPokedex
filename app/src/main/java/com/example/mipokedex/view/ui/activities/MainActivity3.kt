@@ -1,14 +1,18 @@
 package com.example.mipokedex.view.ui.activities
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
 import com.bumptech.glide.Glide
 import com.example.mipokedex.R
+import com.example.mipokedex.databinding.ActivityMain2Binding
 import com.example.mipokedex.databinding.ActivityMain3Binding
 import com.example.mipokedex.model.Pokedetalle
 import com.example.mipokedex.model.PokemonAPI
@@ -21,6 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity3 : AppCompatActivity() {
 
     private lateinit var binding: ActivityMain3Binding
+    private lateinit var  mp: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +39,7 @@ class MainActivity3 : AppCompatActivity() {
             .baseUrl(urlBase)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
+        mp = MediaPlayer.create(this, R.raw.sound2)
         val pokeAPI: PokemonAPI = retrofit.create(PokemonAPI::class.java)
         val call: Call<Pokedetalle> = pokeAPI.getDetalles(pokeNombre.toString())
         call.enqueue(object: Callback<Pokedetalle>{
@@ -59,7 +64,10 @@ class MainActivity3 : AppCompatActivity() {
                         definirTipo(tipo1, tipo2)
                     }
                     pbDetalles.visibility = View.INVISIBLE
-                    ibBoton.setOnClickListener { finish() }
+                    ibBoton.setOnClickListener {
+                        finish()
+                        mp.stop()
+                    }
                 }
             }
 
@@ -72,8 +80,29 @@ class MainActivity3 : AppCompatActivity() {
                     pbDetalles.visibility = View.INVISIBLE
                 }
             }
-
         })
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mp.isLooping = true
+        mp.start()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mp.stop()
+    }
+    override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+        return when (keyCode){
+            KeyEvent.KEYCODE_BACK ->{
+                mp.stop()
+                finish()
+                true
+            }
+            else -> {super.onKeyUp(keyCode, event)}
+        }
     }
 
     private fun definirTipo(tipo1: String?, tipo2: String?){
@@ -235,6 +264,17 @@ class MainActivity3 : AppCompatActivity() {
         }else{
             ivTipo2.visibility = View.INVISIBLE
             tvDivisor.visibility = View.INVISIBLE
+        }
+
+    }
+
+    fun swSonidoClick(view: android.view.View) {
+        val swSonido = findViewById<SwitchCompat>(R.id.swSonidoDetalles)
+        if(swSonido.isChecked){
+            mp.setVolume(0.0F,0.0F)
+        }
+        if(!swSonido.isChecked){
+            mp.setVolume(1.0F,1.0F)
         }
 
     }

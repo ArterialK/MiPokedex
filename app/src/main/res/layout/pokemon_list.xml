@@ -12,12 +12,12 @@
 
 
     <LinearLayout
-        android:layout_width="351dp"
-        android:layout_height="89dp"
+        android:layout_width="300dp"
+        android:layout_height="92dp"
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="352dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B9E4DDDD">
 
@@ -55,20 +55,20 @@
                 tools:ignore="TextContrastCheck" />
 
             <LinearLayout
-                android:layout_width="159dp"
-                android:layout_height="63dp"
+                android:layout_width="143dp"
+                android:layout_height="60dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="0dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="20dp"
                 android:layout_toEndOf="@+id/ivPokeball"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvPokeNombre"
-                    android:layout_width="match_parent"
+                    android:layout_width="142dp"
                     android:layout_height="match_parent"
                     android:fontFamily="casual"
                     android:gravity="center_vertical"

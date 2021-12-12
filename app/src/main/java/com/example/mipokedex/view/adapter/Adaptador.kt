@@ -55,7 +55,7 @@ class Adaptador(context: Context, pokemones: Pokemon, onPokeListener: OnItemList
             tvPokeID.text = index.toString()
             pokemon = item
             Glide.with(context)
-                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index.toString()}.png")
+                .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${index.toString()}.png")
                 .into(ivPokeball)
         }
 

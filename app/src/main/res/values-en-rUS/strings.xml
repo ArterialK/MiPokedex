@@ -36,4 +36,5 @@
     <string name="veneno">Poison</string>
     <string name="acero">Steel</string>
     <string name="hierba">Grass</string>
+    <string name="sonido">Sound off</string>
 </resources>

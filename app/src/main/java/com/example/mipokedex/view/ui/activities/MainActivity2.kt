@@ -1,11 +1,14 @@
 package com.example.mipokedex.view.ui.activities
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mipokedex.R
 import com.example.mipokedex.databinding.ActivityMain2Binding
@@ -22,7 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
 
     private lateinit var binding: ActivityMain2Binding
-
+    private lateinit var mp: MediaPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater)
@@ -33,7 +36,7 @@ class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
             .baseUrl(urlBase)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
+        mp = MediaPlayer.create(this, R.raw.sound1)
         val pokeApi: PokemonAPI = retrofit.create(PokemonAPI::class.java)
         val call: Call<Pokemon> = pokeApi.getPokemon("?limit=151")
         call.enqueue(object: Callback<Pokemon>{
@@ -62,12 +65,46 @@ class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
         })
     }
 
+    override fun onStart() {
+        super.onStart()
+        mp.isLooping = true
+        mp.start()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mp.stop()
+    }
+
     override fun onPokeClick(poke: Pokenombre) {
         val parametros = Bundle()
         parametros.putString("pokemon", poke.nombre.toString())
         val intent = Intent(this, MainActivity3::class.java)
         intent.putExtras(parametros)
+        mp.pause()
         startActivity(intent)
+    }
+
+    override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
+        return when (keyCode){
+            KeyEvent.KEYCODE_BACK ->{
+                mp.stop()
+                finish()
+                true
+            }
+            else -> {super.onKeyUp(keyCode, event)}
+        }
+    }
+
+    fun swSonidoClick(view: android.view.View) {
+        val swSonido = findViewById<SwitchCompat>(R.id.swSonido)
+        if(swSonido.isChecked){
+            mp.setVolume(0.0F,0.0F)
+        }
+        if(!swSonido.isChecked){
+            mp.setVolume(1.0F,1.0F)
+        }
     }
 }
 
