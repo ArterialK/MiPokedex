@@ -71,10 +71,21 @@ class MainActivity2 : AppCompatActivity(), Adaptador.OnItemListener {
         mp.start()
 
     }
-
     override fun onDestroy() {
         super.onDestroy()
         mp.stop()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if(mp.isPlaying){
+            mp.pause()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mp.start()
     }
 
     override fun onPokeClick(poke: Pokenombre) {

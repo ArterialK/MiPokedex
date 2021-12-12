@@ -84,16 +84,29 @@ class MainActivity3 : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        mp.isLooping = true
+        mp.start()
+
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        mp.stop()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if(mp.isPlaying){
+            mp.pause()
+        }
+    }
+
     override fun onResume() {
         super.onResume()
-        mp.isLooping = true
         mp.start()
     }
 
-    override fun onStop() {
-        super.onStop()
-        mp.stop()
-    }
     override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
         return when (keyCode){
             KeyEvent.KEYCODE_BACK ->{
