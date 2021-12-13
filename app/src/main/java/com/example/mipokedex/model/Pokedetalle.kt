@@ -21,6 +21,9 @@ class Pokedetalle {
     @SerializedName("sprites")
     var imagen: PokeImagen?  = null
 
+    @SerializedName("stats")
+    var stats: List<Estadisticas>?  = null
+
 }
 
 class PokeTipos{
@@ -36,4 +39,17 @@ class Poketipo {
 class PokeImagen{
     @SerializedName("front_default")
     var frente: String? = null
+}
+
+class Estadisticas{
+    @SerializedName("base_stat")
+    var estadoBase: Int? = null
+
+    @SerializedName("stat")
+    var nombreStat: NombreStat? = null
+}
+
+class NombreStat{
+    @SerializedName("name")
+    var nombreEstadistica: String? = null
 }

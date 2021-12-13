@@ -50,24 +50,6 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <TextView
-        android:id="@+id/tvTipos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/tipo"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,16 +67,16 @@
         tools:text="@string/nombre" />
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="271dp"
-        android:layout_height="92dp"
+        android:id="@+id/tlDetalles"
+        android:layout_width="283dp"
+        android:layout_height="168dp"
         android:layout_marginStart="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754">
+        app:layout_constraintVertical_bias="0.877">
 
         <TableRow
             android:layout_width="match_parent"
@@ -122,6 +104,33 @@
                 tools:ignore="TextContrastCheck"
                 tools:text="@string/numero" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTTamano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tamano"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTamano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/tamano" />
         </TableRow>
 
         <TableRow
@@ -158,33 +167,6 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvTTamano"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tamano"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/tvTamano"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#1C1C18"
-                tools:ignore="TextContrastCheck"
-                tools:text="@string/tamano" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
                 android:id="@+id/tvTExperiencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,77 +189,81 @@
                 tools:text="@string/experiencia" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTipos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/tipo"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/tvTipo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/pokeTipo1" />
+
+            <TextView
+                android:id="@+id/tvDivisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divisor"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvTipo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#1C1C18"
+                tools:ignore="TextContrastCheck"
+                tools:text="@string/pokeTipo2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivTipo1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/pokeTipo1"
+                tools:ignore="ImageContrastCheck"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivTipo2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/pokeTipo2"
+                tools:ignore="ImageContrastCheck"
+                tools:srcCompat="@tools:sample/avatars" />
+        </TableRow>
+
     </TableLayout>
-
-    <ImageView
-        android:id="@+id/ivTipo1"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/pokeTipo1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/ivTipo2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/pokeTipo2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/tvTipo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:textColor="#1C1C18"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvDivisor"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"
-        tools:ignore="TextContrastCheck"
-        tools:text="@string/pokeTipo1" />
-
-    <TextView
-        android:id="@+id/tvTipo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textColor="#1C1C18"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvDivisor"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"
-        tools:ignore="TextContrastCheck"
-        tools:text="@string/pokeTipo2" />
-
-    <TextView
-        android:id="@+id/tvDivisor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/divisor"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swSonidoDetalles"
@@ -294,5 +280,172 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.099" />
+
+    <TableLayout
+        android:id="@+id/tlStats"
+        android:layout_width="283dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/hp"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="61dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvHPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAttack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/attack"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAttackS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDefense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/defense"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDefenseS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSpecialA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/specialA"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSpecialAS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSpecialD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/specialD"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSpecialDS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speed"
+                android:textColor="#000000"
+                tools:ignore="TextContrastCheck" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSpeedS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btEstadisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3C82525"
+        android:onClick="verStats"
+        android:text="@string/stats"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

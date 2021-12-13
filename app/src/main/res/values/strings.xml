@@ -18,6 +18,8 @@
     <string name="tipo">Tipo(s)</string>
     <string name="divisor">/</string>
     <string name="sonido">Apagar sonido</string>
+    <string name="stats">Estadisticas</string>
+    <string name="detalles">Detalles</string>
 
     <string name="agua">Agua</string>
     <string name="fuego">Fuego</string>
@@ -37,5 +39,12 @@
     <string name="veneno">Veneno</string>
     <string name="acero">Acero</string>
     <string name="hierba">Hierba</string>
+
+    <string name="hp">Vida</string>
+    <string name="attack">Ataque</string>
+    <string name="defense">Defensa</string>
+    <string name="specialA">Ataque Esp</string>
+    <string name="specialD">Defensa Esp</string>
+    <string name="speed">Velocidad</string>
 
 </resources>

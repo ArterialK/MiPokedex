@@ -6,10 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.widget.SwitchCompat
+import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.example.mipokedex.R
 import com.example.mipokedex.databinding.ActivityMain2Binding
@@ -54,7 +53,12 @@ class MainActivity3 : AppCompatActivity() {
                     Glide.with(this@MainActivity3)
                         .load(response.body()?.imagen?.frente.toString())
                         .into(ivPokeDetalle)
-
+                    tvHPS.text = response.body()?.stats?.get(0)?.estadoBase?.toString()
+                    tvAttackS.text = response.body()?.stats?.get(1)?.estadoBase?.toString()
+                    tvDefenseS.text = response.body()?.stats?.get(2)?.estadoBase?.toString()
+                    tvSpecialAS.text = response.body()?.stats?.get(3)?.estadoBase?.toString()
+                    tvSpecialDS.text = response.body()?.stats?.get(4)?.estadoBase?.toString()
+                    tvSpeedS.text = response.body()?.stats?.get(5)?.estadoBase?.toString()
                     val tipo1: String? = response.body()?.tipos?.get(0)?.tipo?.nombreTipo
                     try{
                         val tipo2: String? = response.body()?.tipos?.get(1)?.tipo?.nombreTipo
@@ -68,6 +72,7 @@ class MainActivity3 : AppCompatActivity() {
                         finish()
                         mp.stop()
                     }
+                    btEstadisticas.visibility = View.VISIBLE
                 }
             }
 
@@ -290,5 +295,20 @@ class MainActivity3 : AppCompatActivity() {
             mp.setVolume(1.0F,1.0F)
         }
 
+    }
+
+    fun verStats(view: android.view.View) {
+        val tlDetalles = findViewById<TableLayout>(R.id.tlDetalles)
+        val tlStats = findViewById<TableLayout>(R.id.tlStats)
+        val btDetalles = findViewById<Button>(R.id.btEstadisticas)
+        if(tlDetalles.isVisible){
+            btDetalles.text = getString(R.string.detalles)
+            tlDetalles.visibility = View.INVISIBLE
+            tlStats.visibility = View.VISIBLE
+        }else{
+            btDetalles.text = getString(R.string.stats)
+            tlDetalles.visibility = View.VISIBLE
+            tlStats.visibility = View.INVISIBLE
+        }
     }
 }
