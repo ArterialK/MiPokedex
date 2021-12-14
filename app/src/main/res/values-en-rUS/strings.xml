@@ -6,7 +6,7 @@
     <string name="pokeimagne">SpriteOfPoke</string>
     <string name="pokeTipo1">type1</string>
     <string name="pokeTipo2">type2</string>
-    <string name="titulo">Create By Hernandez Calderon Fernando</string>
+    <string name="titulo">Create By:\n Hernandez Calderon Fernando</string>
     <string name="urlPoke">https://pokeapi.co/api/v2/pokemon/</string>
     <string name="logs">LOGS</string>
     <string name="listaNom">Pokemon name</string>
